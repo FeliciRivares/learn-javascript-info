@@ -17,9 +17,9 @@
 // P.S. Використовуйте typeof для перевірки, що значення властивості числове.
 
 let menu = {
-      width: 200,
-      height: 300,
-      title: "Моє меню",
+    width: 200,
+    height: 300,
+    title: "Моє меню",
     //   border: 3, 
 };
 console.log(menu);
