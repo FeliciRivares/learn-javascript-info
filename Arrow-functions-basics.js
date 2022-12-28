@@ -1,10 +1,10 @@
 let ask = (question, yes, no) => {
     if (confirm(question)) yes();
     else no();
-    };
+};
     
-    ask(
+ask(
     "Ви згодні?",
     () => alert("Ви погодились."),
-    () => alert("Ви скасували виконання."),
-    );
+    () => alert("Ви скасували виконання.")
+);
