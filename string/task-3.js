@@ -2,11 +2,11 @@
 // maxlength – замінює кінець str символом трьох крапок "…", щоб його довжина була рівною maxlength.
 // Результатом функції повинен бути урізаний (якщо потребується) рядок.
 
-function truncate(str, maxlength){
+function truncate(str, maxlength) {
     let lenghtStr = str.length;
-    if( lenghtStr > maxlength ){
-        
-    }
+    let maxStrLenght = str.substr(0, maxlength);
+    
+    return lenghtStr > maxlength ? maxStrLenght + "..." : str 
 }
 
-truncate("dfgdfg", 3);
+alert(truncate("dfgfhjfhhjfhjfdfg", 8));
