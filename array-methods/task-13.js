@@ -20,7 +20,11 @@
 // Будь ласка, використовуйте метод масиву .reduce у рішенні.
 
 function groupById(arr){
-
+    return arr
+        .reduce((obj, value) => {
+            obj[value.id] = value;
+            return obj;
+        }, {})
 }
 
 let user = [
@@ -30,3 +34,4 @@ let user = [
 ];
 
 let usersById = groupById(user);
+console.log(usersById);
