@@ -20,3 +20,29 @@ scrollWidth/scrollHeight – ширина/висота вмісту, як і cli
 scrollLeft/scrollTop – ширина/висота прокрученої верхньої частини елемента, починаючи з його верхнього лівого кута.
 Усі властивості доступні лише для читання, за винятком scrollLeft/scrollTop які змушують браузер прокручувати елемент у разі зміни.
 
+
+Геометрія:
+
+Ширина/висота видимої частини документа (ширина/висота області вмісту): document.documentElement.clientWidth/clientHeight
+
+Ширина/висота всього документа з прокрученою частиною:
+
+let scrollHeight = Math.max(
+  document.body.scrollHeight, document.documentElement.scrollHeight,
+  document.body.offsetHeight, document.documentElement.offsetHeight,
+  document.body.clientHeight, document.documentElement.clientHeight
+);
+Прокрутка:
+
+Прочитати поточну прокрутку: window.pageYOffset/pageXOffset.
+
+Змінити поточну прокрутку:
+
+window.scrollTo(pageX,pageY) – абсолютні координати,
+window.scrollBy(x,y) – прокрутити відносно поточного місця,
+elem.scrollIntoView(top) – прокрутити, щоб зробити elem видимим (вирівняти з верхньою/нижньою частиною вікна).
+
+document.body.style.overflow = ‘hidden’
+document.body.style.overflow = ‘’
+Перша кнопка зупиняє прокрутку, а друга відновлює.
+
